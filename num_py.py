@@ -72,3 +72,64 @@ print(x.base)
 print(y.base,"_",z.base)
 
 
+
+
+#CRUD Numpy Array
+
+import numpy as np
+
+#CREATING
+data1= np.random.rand(2,3,4)
+#2 larger arrays with each having 3 arrays and each array having 4 numbers
+print(data1)
+data2=np.zeros([2,3,4])
+print(data2)
+# Creates an array with 19 in the dimension (2,3,4)
+data3=np.full((2,3,4),19)
+print(data3)
+data4=np.ones([2,3,4])
+print(data4)
+
+
+data=np.array([  [1,3,4],[45,87,41]  ])
+print(data)
+
+#READING
+print(data.shape)
+print(data.dtype)
+print(data.size)
+#Slicing
+print(data[0])
+print(data[0:1])
+print(data[-1])#reverse last value
+print(data[0][2])
+
+#UPDATING
+datax=np.random.rand(8)
+print(datax)
+dataAdd=np.add(data1,data3)
+print(dataAdd)
+#similarly np.subtract , np.divide ,np.multiply,np.dot(dotproduct)
+# Statistical Functions
+# np.sqrt , np.abs , np.power ,np.log , np.exp ,np.min ,np.max
+data[0][1]=9999
+print(data)
+print(data.sort())
+print(data.shape)
+dat=data.reshape(2,1)
+print(dat.shape)
+
+#appending values
+zeros=np.zeros((3))
+print(zeros)
+zerosx=np.append(zeros,[3,4])
+print(zerosx)
+zeroParticular=np.insert(zeros,1,3)
+print(zeroParticular)
+
+
+#DELETE
+
+np.delete(data,0,axis=0)
+print(data)
+
